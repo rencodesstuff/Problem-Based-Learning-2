@@ -2,15 +2,13 @@ import java.util.Scanner;
 
 public class menuPulang {
 
-    public static menuUtama menuUtama = new menuUtama();
-
     public void pulangBuku() {
-        Scanner scanner = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("Pulang buku :");
 
         System.out.print("No ID Buku : ");
-        int bookId = scanner.nextInt();
+        int bookId = scan.nextInt();
 
         Books bookToReturn = null;
         for (Books book : Books.booksList) {
@@ -32,8 +30,6 @@ public class menuPulang {
             System.out.println("Book with ID " + bookId + " has been returned.");
         }
 
-        scanner.close();
-
-        menuUtama.newMain();
+        scan.close();
     }
 }

@@ -1,16 +1,16 @@
 import java.util.Scanner;
 
 public class menuUtama {
-    
-
-    public static Scanner scanner = new Scanner(System.in);   
-    menuBuku menuBuku = new menuBuku();
+ 
+    private static menuBuku menuBuku = new menuBuku();
     menuFaulty menuFaulty = new menuFaulty();
     menuPinjam menuPinjam = new menuPinjam();
     menuPulang menuPulang = new menuPulang();
     menuSearch menuSearch = new menuSearch(); 
     
     public void newMain() {
+
+        Scanner pilih = new Scanner(System.in);  
 
         System.out.println("\nMenu Utama");
         System.out.println("1. Buku");
@@ -20,7 +20,7 @@ public class menuUtama {
         System.out.println("5. Display laporan faulty");
         System.out.print("Selection : ");
 
-        int choice = scanner.nextInt();
+        int choice = pilih.nextInt();
 
         switch(choice) {
             case 1:
@@ -43,10 +43,14 @@ public class menuUtama {
                 newMain();
                 break;
         }
+
+        pilih.close();
     }
     
     
     public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);  
 
         System.out.print("Selamat datang ke Sistem Library XYZ");
         menuUtama menuUtama = new menuUtama();
