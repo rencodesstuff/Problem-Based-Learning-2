@@ -41,7 +41,7 @@ public class menuSearch {
             }
         }
 
-        System.out.println("\nTekan 1 untuk meminjam buku lagi");
+        System.out.println("\nTekan 1 untuk mencari buku lagi");
         System.out.println("Tekan 2 untuk kembali ke menu utama");
         int choice = cari.nextInt();
         cari.nextLine();
